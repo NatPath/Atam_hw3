@@ -20,16 +20,4 @@ print:
   syscall
   retq
 
-/*
-
- movq $_start, %rdx     # copy _start addr
- add $0x1e, %rdx        # set offset for injection
- movb $0xe8, (%rdx)    # inject opcode
- add $0x8, %rdx         # calculate rip
- sub $print, %rdx       # calulate relative distance to print
- movq %rdx, %rax       # save addr for later 
- movq $_start, %rdx     # reset %rdx to _start addr
- add $0x1f, %rdx        # set offest for injection
- movq $print, (%rdx)     # inject addr
- jmp _start             # jump to a.o/_start */ 
 
