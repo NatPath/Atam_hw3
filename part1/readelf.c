@@ -6795,6 +6795,7 @@ process_section_headers (Filedata * filedata)
 	warn (_("Size of section %u is larger than the entire file!\n"), i);
 
 
+      printf ("  [%2u] ", i);
       if (do_section_details){
 	printf ("%s\n      ", printable_section_name (filedata, section));
 	  }
